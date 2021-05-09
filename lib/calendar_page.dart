@@ -71,10 +71,19 @@ class _CalendarRangeState extends State<CalendarRange> {
         child: TableCalendar(
           calendarStyle: CalendarStyle(
             isTodayHighlighted: false,
-            rangeHighlightColor: d_green.withOpacity(0.5),
-            todayDecoration: BoxDecoration(
-                //color: d_green,
-                ),
+            rangeHighlightColor: d_green,
+            rangeStartDecoration: BoxDecoration(
+              color: d_green,
+              shape: BoxShape.circle,
+            ),
+            withinRangeTextStyle: TextStyle(
+              color: Colors.white,
+            ),
+            rangeEndDecoration: BoxDecoration(
+              //border: BoxBorder(),
+              color: d_green,
+              shape: BoxShape.circle,
+            ),
           ),
           firstDay: kFirstDay,
           lastDay: kLastDay,
