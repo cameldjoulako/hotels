@@ -66,32 +66,45 @@ class _CalendarRangeState extends State<CalendarRange> {
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.all(15),
-      color: Colors.white,
+      color: Colors.grey[10],
       child: Expanded(
         child: TableCalendar(
-          calendarStyle: CalendarStyle(
-            isTodayHighlighted: false,
-            rangeHighlightColor: d_green,
-            rangeStartDecoration: BoxDecoration(
-              color: d_green,
-              shape: BoxShape.circle,
-            ),
-            withinRangeTextStyle: TextStyle(
-              color: Colors.white,
-            ),
-            rangeEndDecoration: BoxDecoration(
-              //border: BoxBorder(),
-              color: d_green,
-              shape: BoxShape.circle,
-            ),
-          ),
-          firstDay: kFirstDay,
           lastDay: kLastDay,
           focusedDay: _focusedDay,
           selectedDayPredicate: (day) => isSameDay(_selectedDay, day),
           rangeStartDay: _rangeStart,
           rangeEndDay: _rangeEnd,
           calendarFormat: _calendarFormat,
+          calendarStyle: CalendarStyle(
+            isTodayHighlighted: false,
+            rangeHighlightColor: d_green,
+            rangeStartDecoration: BoxDecoration(
+              color: d_green,
+              shape: BoxShape.circle,
+              border: Border.fromBorderSide(
+                BorderSide(
+                  color: Colors.white,
+                  width: 3,
+                  style: BorderStyle.solid,
+                ),
+              ),
+            ),
+            withinRangeTextStyle: TextStyle(
+              color: Colors.white,
+            ),
+            rangeEndDecoration: BoxDecoration(
+              color: d_green,
+              shape: BoxShape.circle,
+              border: Border.fromBorderSide(
+                BorderSide(
+                  color: Colors.white,
+                  width: 3,
+                  style: BorderStyle.solid,
+                ),
+              ),
+            ),
+          ),
+          firstDay: kFirstDay,
           rangeSelectionMode: _rangeSelectionMode,
           onDaySelected: (selectedDay, focusedDay) {
             if (!isSameDay(_selectedDay, selectedDay)) {
@@ -149,7 +162,7 @@ class PeriodSection extends StatelessWidget {
                     style: TextStyle(
                       fontWeight: FontWeight.w100,
                       fontSize: 16,
-                      color: Colors.grey,
+                      color: Colors.grey[900],
                     ),
                   ),
                   SizedBox(
@@ -178,7 +191,7 @@ class PeriodSection extends StatelessWidget {
                     style: TextStyle(
                       fontWeight: FontWeight.w100,
                       fontSize: 16,
-                      color: Colors.grey[800],
+                      color: Colors.grey[900],
                     ),
                   ),
                   const SizedBox(
