@@ -160,9 +160,9 @@ class PeriodSection extends StatelessWidget {
                     'Depart',
                     textAlign: TextAlign.left,
                     style: TextStyle(
-                      fontWeight: FontWeight.w100,
+                      fontWeight: FontWeight.w400,
                       fontSize: 16,
-                      color: Colors.grey[900],
+                      color: Colors.grey[700],
                     ),
                   ),
                   SizedBox(
@@ -180,7 +180,7 @@ class PeriodSection extends StatelessWidget {
               Container(
                 height: 60,
                 width: 1,
-                color: Colors.grey[400],
+                color: Colors.grey[350],
               ),
               Column(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -189,9 +189,9 @@ class PeriodSection extends StatelessWidget {
                   Text(
                     'Return',
                     style: TextStyle(
-                      fontWeight: FontWeight.w100,
+                      fontWeight: FontWeight.w400,
                       fontSize: 16,
-                      color: Colors.grey[900],
+                      color: Colors.grey[700],
                     ),
                   ),
                   const SizedBox(
