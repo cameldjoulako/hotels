@@ -32,16 +32,7 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
   Widget build(BuildContext context) {
     return AppBar(
       elevation: 0,
-      leading: IconButton(
-        icon: Icon(
-          Icons.chevron_left,
-          color: Colors.black,
-          size: 30,
-        ),
-        onPressed: () {
-          Navigator.pop(context);
-        },
-      ),
+      leading: null,
       actions: [],
       backgroundColor: Colors.white,
     );
@@ -75,6 +66,11 @@ class _CalendarRangeState extends State<CalendarRange> {
           rangeStartDay: _rangeStart,
           rangeEndDay: _rangeEnd,
           calendarFormat: _calendarFormat,
+          headerStyle: HeaderStyle(
+            titleCentered: true,
+            formatButtonVisible: false,
+            titleTextStyle: TextStyle(fontSize: 18),
+          ),
           calendarStyle: CalendarStyle(
             isTodayHighlighted: false,
             rangeHighlightColor: d_green,
