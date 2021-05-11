@@ -56,8 +56,8 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
         'Explore',
         style: GoogleFonts.nunito(
           color: Colors.black,
-          fontSize: 24,
-          fontWeight: FontWeight.w600,
+          fontSize: 22,
+          fontWeight: FontWeight.w800,
         ),
       ),
       actions: [
@@ -87,7 +87,7 @@ class SearchSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.only(top: 20, left: 10, right: 10, bottom: 5),
+      padding: EdgeInsets.only(top: 25, left: 10, right: 10, bottom: 10),
       decoration: BoxDecoration(
         color: Colors.grey[200],
       ),
@@ -107,6 +107,13 @@ class SearchSection extends StatelessWidget {
                       color: Colors.white,
                       style: BorderStyle.solid,
                     ),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.grey,
+                        blurRadius: 5,
+                        offset: Offset(1, 1),
+                      ),
+                    ],
                   ),
                   child: TextField(
                     decoration: InputDecoration(
@@ -128,6 +135,7 @@ class SearchSection extends StatelessWidget {
                 style: ElevatedButton.styleFrom(
                   padding: EdgeInsets.all(10),
                   shape: CircleBorder(),
+                  shadowColor: Colors.white,
                   primary: d_green,
                 ),
               ),
@@ -147,6 +155,9 @@ class SearchSection extends StatelessWidget {
                         color: Colors.grey,
                         fontSize: 15,
                       ),
+                    ),
+                    SizedBox(
+                      height: 8,
                     ),
                     Text(
                       '12 Dec - 22 Dec',
@@ -169,6 +180,9 @@ class SearchSection extends StatelessWidget {
                         color: Colors.grey,
                         fontSize: 15,
                       ),
+                    ),
+                    SizedBox(
+                      height: 8,
                     ),
                     Text(
                       '1 Room - 2 Adults',
@@ -269,7 +283,7 @@ class HotelSection extends StatelessWidget {
             children: hotelList.map((hotel) {
               return Container(
                 margin: EdgeInsets.all(10.0),
-                height: 240,
+                height: 230,
                 width: 400,
                 //color: Colors.green,
                 decoration: BoxDecoration(
@@ -279,7 +293,7 @@ class HotelSection extends StatelessWidget {
                   ),
                   boxShadow: [
                     BoxShadow(
-                      color: Colors.grey[300],
+                      color: Colors.grey[350],
                       //color: Colors.grey.withOpacity(0.5),
                       spreadRadius: 4,
                       blurRadius: 4,
@@ -321,23 +335,6 @@ class HotelSection extends StatelessWidget {
                                   ),
                                 );
                               },
-                              /* onPressed: () {
-                                showDialog(
-                                  context: context,
-                                  builder: (BuildContext context) {
-                                    return Expanded(
-                                      child: AlertDialog(
-                                        scrollable: true,
-                                        title: Text('Booking'),
-                                        content: Container(
-                                          color: Colors.white,
-                                          child: CalendarPage(),
-                                        ),
-                                      ),
-                                    );
-                                  },
-                                );
-                              }, */
                               child: Padding(
                                 padding: EdgeInsets.all(8),
                                 child: Icon(
@@ -352,7 +349,7 @@ class HotelSection extends StatelessWidget {
                       ),
                     ),
                     Container(
-                      margin: EdgeInsets.fromLTRB(10, 5, 10, 5),
+                      margin: EdgeInsets.fromLTRB(10, 10, 10, 0),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
@@ -374,7 +371,7 @@ class HotelSection extends StatelessWidget {
                       ),
                     ),
                     Container(
-                      margin: EdgeInsets.fromLTRB(10, 3, 10, 5),
+                      margin: EdgeInsets.fromLTRB(10, 0, 10, 0),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
@@ -415,7 +412,7 @@ class HotelSection extends StatelessWidget {
                       ),
                     ),
                     Container(
-                      margin: EdgeInsets.fromLTRB(10, 4, 10, 4),
+                      margin: EdgeInsets.fromLTRB(10, 3, 10, 0),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
