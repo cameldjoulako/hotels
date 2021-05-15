@@ -96,10 +96,9 @@ class SearchSection extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Container(
-                padding: EdgeInsets.only(left: 5),
+              Expanded(
                 child: Container(
-                  width: 320,
+                  padding: EdgeInsets.only(left: 5),
                   decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(20),
@@ -207,32 +206,32 @@ class HotelSection extends StatelessWidget {
     {
       'title': 'Grand Royl Hotel',
       'place': 'wembley, London',
-      'distance': '2 km to city',
-      'review': '80 Reviews',
+      'distance': 2,
+      'review': 80,
       'picture': 'images/hotel1.jpg',
       'price': '180',
     },
     {
       'title': 'Queen Hotel',
       'place': 'wembley, London',
-      'distance': '2 km to city',
-      'review': '80 Reviews',
+      'distance': 2,
+      'review': 80,
       'picture': 'images/hotel2.jpg',
       'price': '220',
     },
     {
       'title': 'Grand Mal Hotel',
       'place': 'wembley, London',
-      'distance': '2 km to city',
-      'review': '80 Reviews',
+      'distance': 2,
+      'review': 80,
       'picture': 'images/hotel3.jpg',
       'price': '400',
     },
     {
       'title': 'Hilton',
       'place': 'wembley, London',
-      'distance': '2 km to city',
-      'review': '80 Reviews',
+      'distance': 2,
+      'review': 80,
       'picture': 'images/hotel4.jpg',
       'price': '910',
     },
@@ -320,7 +319,7 @@ class HotelSection extends StatelessWidget {
                       child: Stack(
                         children: [
                           Positioned(
-                            left: 295,
+                            right: 0.5,
                             bottom: 85,
                             child: MaterialButton(
                               color: Colors.white,
@@ -391,7 +390,7 @@ class HotelSection extends StatelessWidget {
                                 size: 14.0,
                               ),
                               Text(
-                                hotel['distance'],
+                                hotel['distance'].toString() + " km to city",
                                 style: GoogleFonts.nunito(
                                   fontSize: 14,
                                   color: Colors.grey[500],
@@ -445,7 +444,7 @@ class HotelSection extends StatelessWidget {
                               ),
                               SizedBox(width: 20),
                               Text(
-                                hotel['review'],
+                                hotel['review'].toString() + " reviews",
                                 style: GoogleFonts.nunito(
                                   fontSize: 14,
                                   color: Colors.grey[500],
